@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { navigateTo, scanCode } from '@tarojs/taro';
-import { View, Text, Button, Image, ITouchEvent } from '@tarojs/components';
+import { View, Text, Image, ITouchEvent } from '@tarojs/components';
 import btn01 from './images/button-01.png';
 import btn02 from './images/button-02.png';
 import btn03 from './images/button-03.png';
@@ -15,7 +15,7 @@ const Index: FC<{}> = () => {
   const toSelfClick = (event: ITouchEvent) => {
     event.preventDefault();
     navigateTo({
-      url: '../scan/scan'
+      url: '../scan/scan?type=2'
     })
   }
 
@@ -26,14 +26,17 @@ const Index: FC<{}> = () => {
     try {
       await scanCode({
         onlyFromCamera: true,
-        success: () => { },
-        fail: () => { }
+        complete: () => {
+          navigateTo({
+            url: '../scan/scan?type=1'
+          });
+        }
       });
     } catch (error) {
-      console.log(error);
+      navigateTo({
+        url: '../scan/scan?type=1'
+      });
     }
-
-    // console.log(result);
   };
 
   return <View className='index'>
@@ -45,9 +48,9 @@ const Index: FC<{}> = () => {
     </View>
     <View className="fn-button">
       <Image className="ico" style={{ width: '36px', height: '36px' }} src={btn01} />
-      <Text className="text">姓名</Text>
+      <Text className="text">崔玥</Text>
     </View>
-    <View className="fn-button">
+    <View onClick={onScanClick} className="fn-button">
       <Image className="ico" style={{ width: '36px', height: '36px' }} src={btn02} />
       <Text className="text">本人信息扫码登记</Text></View>
     <View onClick={toSelfClick} className="fn-button">
@@ -72,7 +75,6 @@ const Index: FC<{}> = () => {
     <View className="b-text">
       北京市大数据中心
     </View>
-    <Button type="primary" onClick={onScanClick}>扫码</Button>
   </View>
 }
 
