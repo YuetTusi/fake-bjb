@@ -1,0 +1,141 @@
+.result {
+  background-image: url(images/top-bg-2.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
+}
+
+.time-box {
+  text-align: center;
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.bao-ico {
+  margin-left: 1rem;
+}
+.qr-ico {
+}
+
+.panel {
+  border-radius: 20px;
+  width: 90vw;
+  margin-top: 1rem;
+  background-color: #fff;
+
+  .info-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+}
+
+.code-box {
+  margin: 1rem auto 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .text{
+    margin-left:.4rem;
+    color:#17c503;
+    font-size: 1.6rem;
+  }
+}
+
+.photo {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  overflow: clip;
+  padding: 1rem;
+  margin: 0 auto;
+
+  .top {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    display: inline-block;
+    width: 400px;
+    border-top: 20px dotted #218dfa;
+    animation: a-top 0.5s step-end infinite;
+  }
+  .right {
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    display: inline-block;
+    height: 400px;
+    border-right: 20px dotted #218dfa;
+    animation: a-right 0.5s step-end infinite;
+  }
+  .bottom {
+    position: absolute;
+    left: 40px;
+    bottom: 0;
+    display: inline-block;
+    width: 400px;
+    border-bottom: 20px dotted #218dfa;
+    animation: a-bottom 0.5s step-end infinite;
+  }
+  .left {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    display: inline-block;
+    height: 400px;
+    border-left: 20px dotted #218dfa;
+    animation: a-left 0.5s step-end infinite;
+  }
+  @keyframes a-top {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  @keyframes a-right {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(5px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  @keyframes a-bottom {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(-5px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  @keyframes a-left {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
