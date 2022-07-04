@@ -15,7 +15,7 @@ const Index: FC<{}> = () => {
   const toSelfClick = (event: ITouchEvent) => {
     event.preventDefault();
     navigateTo({
-      url: '../scan/scan?type=2'
+      url: '../self/self'
     })
   }
 
@@ -28,13 +28,13 @@ const Index: FC<{}> = () => {
         onlyFromCamera: true,
         complete: () => {
           navigateTo({
-            url: '../scan/scan?type=1'
+            url: '../scan/scan'
           });
         }
       });
     } catch (error) {
       navigateTo({
-        url: '../scan/scan?type=1'
+        url: '../scan/scan'
       });
     }
   };
