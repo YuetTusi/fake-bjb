@@ -41,10 +41,11 @@ const Index: FC<{}> = () => {
 
   return <View className='index'>
     <View className="caption">
-      北京健康宝
+      <Text>北京健康宝</Text>
     </View>
-    <View className="caption">
-      北京健康宝更新，升级优化了
+    <View className="alert">
+      <Text>北京健康宝更新，升级优化了</Text>
+      <View className="origin-ico">!</View>
     </View>
     <View className="fn-button">
       <Image className="ico" style={{ width: '36px', height: '36px' }} src={btn01} />

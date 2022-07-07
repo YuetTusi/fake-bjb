@@ -10,6 +10,7 @@ declare module '*.less';
 declare module '*.scss';
 declare module '*.sass';
 declare module '*.styl';
+declare module '*.m4a';
 
 declare namespace NodeJS {
   interface ProcessEnv {

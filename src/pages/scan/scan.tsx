@@ -1,22 +1,32 @@
 import dayjs from 'dayjs';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import {
-//     faQuestion
-// } from '@fortawesome/free-solid-svg-icons';
-import { navigateBack, useDidShow } from '@tarojs/taro';
+import { navigateBack, useDidShow, createInnerAudioContext, InnerAudioContext } from '@tarojs/taro';
 import { FC, useEffect, useState } from 'react';
 import { View, Image, Text, Button, ITouchEvent, Icon } from '@tarojs/components';
 import handsome from '../../images/handsome.jpg';
 import bao from '../../images/button-01.png';
 import qrIcon from './images/qr.png';
 import greenCode from './images/green-code.png';
-import './scan.less'
+import voice from '../../audio/181d74bb408_4cb.m4a';
+import './scan.less';
 
+var audioCtx: InnerAudioContext;
 var tick: NodeJS.Timer | null = null;
+var borderColors: string[] = ['#4acb26', '#278fee'];
+var todayColor = new Date().getDate() % 2 === 0 ? 0 : 1;
 
 const Scan: FC<{}> = () => {
 
     const [time, setTime] = useState<string>(dayjs().format('YYYY-MM-DD HH:mm:ss'));
+
+    useEffect(() => {
+        (() => {
+            if (new Date().getDate() % 7 === 0) {
+                audioCtx = createInnerAudioContext();
+                audioCtx.autoplay = true;
+                audioCtx.src = voice;
+            }
+        })();
+    }, []);
 
     useEffect(() => {
         tick = setInterval(() => {
@@ -56,10 +66,10 @@ const Scan: FC<{}> = () => {
                 </View>
             </View>
             <View className="photo">
-                <View className="b top"></View>
-                <View className="b bottom"></View>
-                <View className="b left"></View>
-                <View className="b right"></View>
+                <View className="b top" style={{ borderTopColor: borderColors[todayColor] }}></View>
+                <View className="b bottom" style={{ borderTopColor: borderColors[todayColor] }}></View>
+                <View className="b left" style={{ borderLeftColor: borderColors[todayColor] }}></View>
+                <View className="b right" style={{ borderLeftColor: borderColors[todayColor] }}></View>
                 <View className="q tl"></View>
                 <View className="q tr"></View>
                 <View className="q bl"></View>

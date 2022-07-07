@@ -16,14 +16,30 @@
     padding: 1rem;
   }
   .alert {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     color: #fff;
     padding: 1rem;
+    .origin-ico {
+      background: linear-gradient(120deg, #fdb94c, #fd904b);
+      border: 1px solid #fff;
+      border-radius: 50%;
+      font-weight: bold;
+      color: #fff;
+      font-size: 0.6rem;
+      width: 32rpx;
+      height: 32rpx;
+      text-align: center;
+    }
   }
 
   .fn-button {
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
+    font-weight: 500;
     padding: 1.2rem 1rem;
     font-size: 1.2rem;
     // border: 1px solid green;
