@@ -87,7 +87,7 @@ const Scan: FC<{}> = () => {
                             <View className="hor">
                                 <Text className="blue warn-left">阴性</Text>
                                 <View style={{ position: 'relative', display: 'inline' }}>
-                                    <Text className="blue warn">2</Text>
+                                    <Text className="blue warn">1</Text>
                                 </View>
                                 <Text className="blue warn-right">天</Text>
                             </View>
@@ -115,7 +115,6 @@ const Scan: FC<{}> = () => {
                                 <Text>疫苗</Text>
                                 <Icon size='20' type="info_circle" color="gray" style={{ marginLeft: '4rpx' }} />
                             </View>
-
                         </View>
                     </View>
                 </View>
@@ -125,6 +124,9 @@ const Scan: FC<{}> = () => {
             <Button onClick={onReturnClick} type="default" >
                 返回首页
             </Button>
+        </View>
+        <View className="copyright-box">
+            <Text>北京市大数据中心</Text>
         </View>
     </View>
 }
