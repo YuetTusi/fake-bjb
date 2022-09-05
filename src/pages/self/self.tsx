@@ -75,7 +75,7 @@ const Self: FC<{}> = () => {
                     </View>
                     <View className="right">
                         <Text className="gray">时间</Text>
-                        <Text className="blue warn">2</Text>
+                        <Text className="blue warn">1</Text>
                         <Text className="gray">天</Text>
                     </View>
                 </View>
