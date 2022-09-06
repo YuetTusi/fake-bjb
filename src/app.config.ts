@@ -1,7 +1,7 @@
 export default defineAppConfig({
   pages: [
-    'pages/self/self',
     'pages/index/index',
+    'pages/self/self',
     'pages/scan/scan',
   ],
   window: {

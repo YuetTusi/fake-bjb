@@ -65,7 +65,7 @@ const Self: FC<{}> = () => {
             </View>
             <View className="code-box">
                 <Image style={{ width: '36px', height: '36px' }} src={greenCode} />
-                <Text className="text">未见异常</Text>0
+                <Text className="text">未见异常</Text>
             </View>
             <View className="count-box">
                 <View className="row">

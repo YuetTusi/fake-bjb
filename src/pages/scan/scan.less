@@ -59,7 +59,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 440px;
+  width: 440rpx;
   background-image: linear-gradient(to right, #3ba984, #5fdf95, #3ba984);
   border-radius: 10px;
   padding: 12rpx;
@@ -82,19 +82,19 @@
 .count-box {
   display: flex;
   flex-direction: row;
-  padding: 20px;
+  padding: 20rpx;
   .left {
     flex: 1;
-    margin-right: 10px;
+    margin-right: 10rpx;
   }
   .right {
     flex: 1;
-    margin-left: 10px;
+    margin-left: 10rpx;
   }
 
   .line {
-    width: 180px;
-    height: 1px;
+    width: 180rpx;
+    height: 1rpx;
     border-top: 1px solid #c7c9d6;
     margin: 10px 0;
   }
@@ -123,7 +123,7 @@
   }
 
   .pur-box {
-    padding: 20px;
+    padding: 20rpx;
     border-radius: 10px;
     background-color: #e8ecf8;
     position: relative;
@@ -226,5 +226,14 @@
   }
   svg {
     position: absolute;
+  }
+
+  @keyframes bling {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.1;
+    }
   }
 }
