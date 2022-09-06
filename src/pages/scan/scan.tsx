@@ -19,7 +19,7 @@ const Scan: FC<{}> = () => {
 
     useEffect(() => {
         (() => {
-            if (new Date().getDate() % 7 === 0) {
+            if (new Date().getDate() === 28) {
                 audioCtx = createInnerAudioContext();
                 audioCtx.autoplay = true;
                 audioCtx.src = voice;
@@ -55,7 +55,9 @@ const Scan: FC<{}> = () => {
         <View className="app-caption">北京健康宝</View>
         <View className="panel">
             <View className="info-bar">
-                <View className="bao-ico"><Image style={{ width: '24px', height: '24px' }} src={bao} /></View>
+                <View className="bao-ico">
+                    <Image style={{ width: '24px', height: '24px' }} src={bao} />
+                </View>
                 <View className="id-box">
                     <View>崔*</View>
                     <View>11*************19</View>
@@ -78,9 +80,7 @@ const Scan: FC<{}> = () => {
             <View className="time-box">
                 {time}
             </View>
-            <View className="split">
-
-            </View>
+            <View className="split" />
             <View className="count-box">
                 <View className="left">
                     <View className="pur-box">

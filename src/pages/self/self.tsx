@@ -83,7 +83,7 @@ const Self: FC<{}> = () => {
                     </View>
                 </View>
                 <View className="split" />
-                <View style={{ padding: "4px 0" }} className="row">
+                <View className="row">
                     <View className="left">
                         <Image style={{ width: '24px', height: '24px' }} src={neddleIco} />
                         <Text className="text">疫苗</Text>

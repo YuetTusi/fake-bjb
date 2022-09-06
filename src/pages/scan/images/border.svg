@@ -5,6 +5,6 @@
 	</linearGradient>
 	<rect width="90%" height="90%" stroke-width="15" x="10" y="10" fill="none" stroke="url(#linear)"
 		stroke-dasharray="0,30" stroke-linecap="round">
-		<animate attributeType="CSS" attributeName="stroke-dashoffset" from="500" to="0" dur="7s" repeatCount="indefinite" />
+		<animate attributeType="CSS" attributeName="stroke-dashoffset" from="500" to="0" dur="8s" repeatCount="indefinite" />
 	</rect>
 </svg>
