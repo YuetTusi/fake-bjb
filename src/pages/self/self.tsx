@@ -2,6 +2,7 @@ import dayjs from 'dayjs';
 import { navigateBack, useDidShow } from '@tarojs/taro';
 import { FC, useEffect, useState } from 'react';
 import { View, Image, Text, Button, Label, ITouchEvent } from '@tarojs/components';
+import DotBorder from '../../component/border/dot-border';
 import handsome from '../../images/handsome.jpg';
 import bao from '../../images/button-01.png';
 import qrIcon from './images/qr-01.png';
@@ -44,7 +45,9 @@ const Self: FC<{}> = () => {
         <View className="app-caption">北京健康宝</View>
         <View className="panel">
             <View className="info-bar">
-                <View className="bao-ico"><Image style={{ width: '24px', height: '24px' }} src={bao} /></View>
+                <View className="bao-ico">
+                    <Image style={{ width: '24px', height: '24px' }} src={bao} />
+                </View>
                 <View className="time-box">
                     <View>{dayjs().format('YYYY年MM月DD日')}</View>
                     <View>{time}</View>
@@ -54,15 +57,15 @@ const Self: FC<{}> = () => {
                 </View>
             </View>
             <View className="photo">
-                <View className="top" />
-                <View className="right" />
-                <View className="bottom" />
-                <View className="left" />
+                <DotBorder pos="top" />
+                <DotBorder pos="left" />
+                <DotBorder pos="right" />
+                <DotBorder pos="bottom" />
                 <Image style={{ width: '100%', height: '100%' }} src={handsome} />
             </View>
             <View className="code-box">
                 <Image style={{ width: '36px', height: '36px' }} src={greenCode} />
-                <Text className="text">未见异常</Text>
+                <Text className="text">未见异常</Text>0
             </View>
             <View className="count-box">
                 <View className="row">

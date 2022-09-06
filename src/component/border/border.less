@@ -1,0 +1,87 @@
+.dot-border {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+
+  &.top {
+    flex-direction: row;
+    top: 0;
+    left: 0;
+    right: 0;
+    animation: a-top 0.5s step-end infinite;
+  }
+  &.bottom {
+    flex-direction: row;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: a-bottom 0.5s step-end infinite;
+  }
+  &.left {
+    flex-direction: column;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    animation: a-left 0.5s step-end infinite;
+  }
+  &.right {
+    flex-direction: column;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    animation: a-right 0.5s step-end infinite;
+  }
+
+  & > .dot {
+    display: inline-block;
+    background-color: #4bc62d;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+
+  @keyframes a-top {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  @keyframes a-right {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(5px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  @keyframes a-bottom {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(-5px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  @keyframes a-left {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}

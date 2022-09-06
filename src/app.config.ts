@@ -1,8 +1,8 @@
 export default defineAppConfig({
   pages: [
+    'pages/self/self',
     'pages/index/index',
     'pages/scan/scan',
-    'pages/self/self'
   ],
   window: {
     backgroundTextStyle: 'light',
