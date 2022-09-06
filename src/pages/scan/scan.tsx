@@ -3,6 +3,7 @@ import { navigateBack, useDidShow, createInnerAudioContext, InnerAudioContext } 
 import { FC, useEffect, useState } from 'react';
 import { View, Image, Text, Button, ITouchEvent, Icon } from '@tarojs/components';
 import handsome from '../../images/handsome.jpg';
+import borderSvg from './images/border.svg';
 import bao from '../../images/button-01.png';
 import qrIcon from './images/qr.png';
 import greenCode from './images/green-code.png';
@@ -11,8 +12,6 @@ import './scan.less';
 
 var audioCtx: InnerAudioContext;
 var tick: NodeJS.Timer | null = null;
-var borderColors: string[] = ['#4acb26', '#278fee'];
-var todayColor = new Date().getDate() % 2 === 0 ? 0 : 1;
 
 const Scan: FC<{}> = () => {
 
@@ -65,16 +64,11 @@ const Scan: FC<{}> = () => {
                     <Image src={qrIcon} style={{ width: '25px', height: '25px' }} />
                 </View>
             </View>
-            <View className="photo">
-                <View className="b top" style={{ borderTopColor: borderColors[todayColor] }}></View>
-                <View className="b bottom" style={{ borderTopColor: borderColors[todayColor] }}></View>
-                <View className="b left" style={{ borderLeftColor: borderColors[todayColor] }}></View>
-                <View className="b right" style={{ borderLeftColor: borderColors[todayColor] }}></View>
-                <View className="q tl"></View>
-                <View className="q tr"></View>
-                <View className="q bl"></View>
-                <View className="q br"></View>
-                <Image style={{ width: '100%', height: '100%' }} src={handsome} />
+            <View className="border-view">
+                <View className="photo-panel">
+                    <Image src={borderSvg} style={{ width: '200px', height: '200px' }} />
+                    <Image className="handsome" src={handsome} />
+                </View>
             </View>
             <View className="code-box">
                 <Image style={{ width: '36px', height: '36px' }} src={greenCode} />
@@ -106,9 +100,7 @@ const Scan: FC<{}> = () => {
                                 <Text>核酸</Text>
                                 <Icon size='20' type="info_circle" color="gray" style={{ marginLeft: '4rpx' }} />
                             </View>
-
                         </View>
-
                     </View>
                 </View>
                 <View className="right">

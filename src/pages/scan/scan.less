@@ -62,7 +62,7 @@
   width: 440px;
   background-image: linear-gradient(to right, #3ba984, #5fdf95, #3ba984);
   border-radius: 10px;
-  padding: 12px;
+  padding: 12rpx;
 
   .text {
     margin-left: 0.4rem;
@@ -203,115 +203,28 @@
   width: 400px;
   height: 400px;
 }
-.photo {
+
+.border-view {
+  margin-top: 40rpx;
   position: relative;
-  width: 400px;
-  height: 400px;
-  overflow: hidden;
-  padding: 1rem;
-  margin: 1rem auto 0 auto;
-
-  //4角遮罩
-  .q {
+  .photo-panel {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .handsome {
     position: absolute;
-    display: block;
-    width: 20px;
-    height: 20px;
-    z-index: 2;
-    background-color: #fff;
-    &.tl {
-      top: 0;
-      left: 0;
-    }
-    &.tr {
-      top: 0;
-      right: 0;
-    }
-    &.bl {
-      bottom: 0;
-      left: 0;
-    }
-    &.br {
-      bottom: 0;
-      right: 0;
-    }
+    top: 25px;
+    left: 25px;
+    height: 330px;
+    width: 330px;
   }
-
-  .b {
+  svg {
     position: absolute;
-    &.top {
-      border-top: 18px dotted #4acb26;
-      width: 1800px;
-      top: 0;
-      left: -400px;
-      right: 0;
-      animation: toright 8s linear infinite;
-      z-index: 1;
-    }
-    &.right {
-      border-left: 18px dotted #4acb26;
-      height: 1800px;
-      top: -400px;
-      right: 0;
-      animation: tobottom 8s linear infinite;
-      z-index: 1;
-    }
-    &.bottom {
-      border-top: 18px dotted #4acb26;
-      width: 1800px;
-      bottom: 0;
-      right: -400px;
-      animation: toleft 8s linear infinite;
-      z-index: 1;
-    }
-    &.left {
-      border-left: 18px dotted #4acb26;
-      height: 1800px;
-      bottom: -400px;
-      left: 0px;
-      animation: totop 8s linear infinite;
-      z-index: 1;
-    }
-  }
-  @keyframes toright {
-    0% {
-      transform: translateX(0px);
-    }
-    100% {
-      transform: translateX(400px);
-    }
-  }
-  @keyframes toleft {
-    0% {
-      transform: translateX(0px);
-    }
-    100% {
-      transform: translateX(-400px);
-    }
-  }
-  @keyframes totop {
-    0% {
-      transform: translateY(0px);
-    }
-    100% {
-      transform: translateY(-400px);
-    }
-  }
-  @keyframes tobottom {
-    0% {
-      transform: translateY(0px);
-    }
-    100% {
-      transform: translateY(400px);
-    }
-  }
-
-  @keyframes bling {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.1;
-    }
   }
 }
